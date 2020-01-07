@@ -2,18 +2,39 @@ package com.saikat.clientdesign2.Models;
 
 public class Weather {
 
-    String day,date,time,comment;
-    int todayWeatherImage,oneHourIntervalWeatherImage,minTemperature,maxTemperature;
+    String day,date, timeFormat,comment;
+    int time,todayWeatherImage,oneHourIntervalWeatherImage,hourlyTemperature,minTemperature,maxTemperature;
 
-    public Weather(String day, String date, String time, String comment, int todayWeatherImage, int oneHourIntervalWeatherImage, int minTemperature, int maxTemperature) {
+    public Weather(String day, String date, String comment, int todayWeatherImage, int minTemperature, int maxTemperature) {
         this.day = day;
         this.date = date;
-        this.time = time;
         this.comment = comment;
         this.todayWeatherImage = todayWeatherImage;
-        this.oneHourIntervalWeatherImage = oneHourIntervalWeatherImage;
         this.minTemperature = minTemperature;
         this.maxTemperature = maxTemperature;
+    }
+
+    public Weather(int time,String timeFormat, int oneHourIntervalWeatherImage, int hourlyTemperature) {
+        this.time = time;
+        this.timeFormat = timeFormat;
+        this.oneHourIntervalWeatherImage = oneHourIntervalWeatherImage;
+        this.hourlyTemperature = hourlyTemperature;
+    }
+
+    public int getTime() {
+        return time;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
+    }
+
+    public int getHourlyTemperature() {
+        return hourlyTemperature;
+    }
+
+    public void setHourlyTemperature(int hourlyTemperature) {
+        this.hourlyTemperature = hourlyTemperature;
     }
 
     public String getDay() {
@@ -32,12 +53,12 @@ public class Weather {
         this.date = date;
     }
 
-    public String getTime() {
-        return time;
+    public String getTimeFormat() {
+        return timeFormat;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setTimeFormat(String timeFormat) {
+        this.timeFormat = timeFormat;
     }
 
     public String getComment() {

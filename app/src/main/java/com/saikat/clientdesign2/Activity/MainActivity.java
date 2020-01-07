@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.saikat.clientdesign2.Fragments.WeatherFragment;
 import com.saikat.clientdesign2.R;
 
 public class MainActivity extends AppCompatActivity {
